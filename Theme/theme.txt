@@ -31,7 +31,8 @@ terminal-border: "0"
   item_color = "#dbdbdb"
   menu_pixmap_style = "terminal_box_*.png"
   selected_item_color = "#ffffff"
-  icon_height =32
+  icon_height =39
+  icon_width =39
   item_height = 48
   item_padding = 8
   item_icon_space = 12
