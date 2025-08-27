@@ -32,3 +32,8 @@ sudo ./installer.sh install
 ## grub-qemu
 This is one of my other tools that uses QEMU to emulate your GRUB environment, allowing you to test and preview bootloader changes safely without rebooting your actual system.
 repo: https://github.com/VC365/grub-qemu
+
+## License
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+
