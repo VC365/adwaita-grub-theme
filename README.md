@@ -5,11 +5,13 @@
 
 # Adwaita GRUB Theme
 
+A GRUB bootloader theme inspired by the elegant Adwaita design.
+
 [![Persian GNOME][persian-gnome-badge]][persian-gnome-url]
 
 </div>
 
-A GRUB bootloader theme inspired by the elegant Adwaita design.
+
 
 <img width="1280" height="719" alt="Adwaita GRUB Theme Preview" src="https://github.com/user-attachments/assets/04b27d88-2724-4b74-ac0a-f2a23773d9e5" />
 
