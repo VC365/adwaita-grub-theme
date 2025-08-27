@@ -21,7 +21,9 @@ install(){
   mkdir -p "$theme_dir"
   cp -r "$SCRIPT_DIR/Theme/"* "$theme_dir"
   cp -an /etc/default/grub /etc/default/grub.bak
-  sed -i -E "s|^[[:space:]]*GRUB_THEME=.*|GRUB_THEME=\"$theme_dir/theme.txt\"|" /etc/default/grub
+  grep -q '^GRUB_THEME=' /etc/default/grub &&
+  sed -i -E "s|^[[:space:]]*GRUB_THEME=.*|GRUB_THEME=\"$theme_dir/theme.txt\"|" /etc/default/grub ||
+  echo "GRUB_THEME=\"$theme_dir/theme.txt\"" >> /etc/default/grub
   grub_mkconfig
   echo -e "${green}done${none}"
 }
