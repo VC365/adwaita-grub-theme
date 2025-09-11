@@ -72,7 +72,7 @@ install(){
 }
 
 uninstall(){
-  [ "$1" == "adwaita-theme" ] || [ "$1" == "adwaita-dim-theme" ] ||
+  [ "$1" == "adw" ] || [ "$1" == "adw-dim" ] ||
     echo -e "${red}Error${none}:The theme entered is wrong." && exit 1
 
   echo -e "${red}Uninstalling $1${none}"
@@ -88,7 +88,7 @@ main(){
   if [ "$UID" -eq 0 ] && [ -d "$script/source" ]; then
     if [ "$1" == "install" ]; then
       if [ "$2" == "adw" ] || [ "$2" == "adw-dim" ]; then
-        install "$2" "$([ "$3" == "adw" ] && echo 'adwaita-theme' || echo 'adwaita-dim-theme')"
+        install "$2" "$([ "$2" == "adw" ] && echo 'adwaita-theme' || echo 'adwaita-dim-theme')"
       else
         echo -e "${red}Error${none}:The theme entered is wrong." && exit 1
       fi
