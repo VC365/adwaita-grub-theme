@@ -91,7 +91,7 @@ main(){
       fi
     elif [ "$1" == "uninstall" ]; then
       if [ "$2" == "adw" ] || [ "$2" == "adw-dim" ]; then
-        uninstall "$2"
+        uninstall "$([ "$2" == "adw" ] && echo 'adwaita-theme' || echo 'adwaita-dim-theme')"
       else
         echo -e "${red}Error${none}:The theme entered is wrong." && exit 1
       fi
