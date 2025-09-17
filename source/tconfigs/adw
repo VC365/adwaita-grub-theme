@@ -45,7 +45,7 @@ terminal-border: "0"
   left = 50%-240
   width = 480
   height = 42	
-  file = "info.png"
+  file = "menu.png"
 }
 
 + progress_bar {
@@ -59,6 +59,6 @@ terminal-border: "0"
   text = "Boot after %d seconds"
   text_color = "#cccccc"
   font = "Adwaita Sans Regular 20"
-  bar_style = "g6_*.png"
+  bar_style = "boxN_*.png"
 }
 
