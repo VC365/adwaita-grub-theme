@@ -72,9 +72,6 @@ install(){
 }
 
 uninstall(){
-  [ "$1" == "adw" ] || [ "$1" == "adw-dim" ] ||
-    { echo -e "${red}Error${none}:The theme entered is wrong." ; exit 1; }
-
   echo -e "${red}Uninstalling $1${none}"
   theme_dir="/usr/share/grub/themes/$1"
   [ -d "$theme_dir" ] && rm -rf "$theme_dir"
