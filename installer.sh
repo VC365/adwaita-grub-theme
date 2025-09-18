@@ -72,6 +72,9 @@ install(){
 }
 
 uninstall(){
+  [ "$1" == "adw" ] || [ "$1" == "adw-dim" ] ||
+    { echo -e "${red}Error${none}:The theme entered is wrong." ; exit 1; }
+
   echo -e "${red}Uninstalling $1${none}"
   theme_dir="/usr/share/grub/themes/$1"
   [ -d "$theme_dir" ] && rm -rf "$theme_dir"
@@ -90,11 +93,11 @@ main(){
         echo -e "${red}Error${none}:The theme entered is wrong." && exit 1
       fi
     elif [ "$1" == "uninstall" ]; then
-      if [ "$2" == "adw" ] || [ "$2" == "adw-dim" ]; then
-        uninstall "$([ "$2" == "adw" ] && echo 'adwaita-theme' || echo 'adwaita-dim-theme')"
-      else
-        echo -e "${red}Error${none}:The theme entered is wrong." && exit 1
-      fi
+        if [ "$2" == "adw" ] || [ "$2" == "adw-dim" ]; then
+         uninstall "$([ "$2" == "adw" ] && echo 'adwaita-theme' || echo 'adwaita-dim-theme')"
+        else
+         echo -e "${red}Error${none}:The theme entered is wrong." && exit 1
+        fi
     else
         echo -e "${red} Options $0 {install 'adw' & 'adw-dim' | uninstall 'adw' & 'adw-dim'}${none}"
         exit 1
