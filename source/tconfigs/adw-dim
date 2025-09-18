@@ -2,50 +2,29 @@
 title-text: ""
 desktop-color: "#1a1a1a"
 title-color: "#ffffff"
-desktop-image: "dood.jpeg"
 terminal-font: "Terminus Regular 18"
-terminal-box: "terminal_box_*.png"
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
+terminal-bg: "#1a1a1a"
 terminal-height: "100%"
 terminal-border: "0"
 
-+label{
- text="Choose your operating system"
- font = "Poppins Regular 48"
- color="#ffffff"
- left = 0%
- width = 100%
- top = 17%
- height = 20
- align = "center"
-}
-
 + boot_menu {
-  left = 25%
-  width = 50%
+  left = 32%
+  width = 31%
   top = 30%
   height = 40%+8
-  item_font = "Adwaita Sans Regular 20"
+  item_font = "Adwaita Sans Regular 18"
   item_color = "#dbdbdb"
-  menu_pixmap_style = "terminal_box_*.png"
   selected_item_color = "#ffffff"
-  icon_height =39
-  icon_width =39
-  item_height = 48
+  icon_height = 54
+  icon_width = 54
+  item_height = 63
   item_padding = 8
   item_icon_space = 12
   item_spacing = 8
   selected_item_pixmap_style = "select_*.png"
-}
-
-+ image {
-  top = 72%+47
-  left = 50%-240
-  width = 480
-  height = 42	
-  file = "menu.png"
 }
 
 + progress_bar {
